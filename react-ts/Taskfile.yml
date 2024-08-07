@@ -1,0 +1,6 @@
+# https://taskfile.dev/usage/
+version: "3"
+tasks:
+  run: bun run dev
+  build: bun run build
+  pre: bun run preview
