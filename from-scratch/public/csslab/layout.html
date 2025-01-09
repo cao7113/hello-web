@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Learn layout</title>
+  </head>
+
+  <body>
+    <div class="grid-wrapper">
+      <div class="box1">One</div>
+      <div class="box2">Two</div>
+      <div class="box3">Three</div>
+      <div class="box4">Four</div>
+      <div class="box5">Five</div>
+      <div class="box6">Six</div>
+    </div>
+
+    <div class="wrapper">
+      <div class="box1">One</div>
+      <div class="box2">Two</div>
+      <div class="box3">Three</div>
+    </div>
+
+    <p>hello</p>
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ul>
+    <p>world</p>
+
+    <style>
+      li {
+        display: inline;
+      }
+
+      .wrapper {
+        display: flex;
+      }
+
+      .wrapper > div {
+        background-color: rgb(142, 190, 142);
+        padding: 1em;
+        border-radius: 5px;
+        margin: 3px;
+      }
+
+      .grid-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px;
+        gap: 10px;
+      }
+
+      .grid-wrapper > div {
+        background-color: rgb(142, 190, 142);
+        padding: 1em;
+        border-radius: 5px;
+        margin: 3px;
+      }
+    </style>
+  </body>
+</html>

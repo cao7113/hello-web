@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:root pseudo-class</title>
+    <style>
+      /* the html element  */
+      :root {
+        /* define global variable */
+        --primary-color: #3498db;
+        --secondary-color: #84b89a;
+        --font-size-base: 18px;
+
+        background-color: rgb(165, 166, 170);
+      }
+
+      html {
+        /* :root 的作用与 html 相同，但优先级更高。 */
+        background-color: rgb(123, 176, 149);
+      }
+
+      body {
+        /* refer global variable */
+        font-size: var(--font-size-base);
+        color: var(--primary-color);
+        background-color: #cbcbe7;
+        margin: 0px;
+      }
+
+      button {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn CSS :root</h1>
+    <p>paragraph to learn :root pseudo-class</p>
+    <button>Click Me!</button>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scratch Web with Vite</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div>
+        <h2>Apps</h2>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/sub-demo/index.html">SubDemo</a>
+        <a href="/custom-component/index.html">CustomComponent</a>
+      </div>
+
+      <div>
+        <h2>Web Pages in public/</h2>
+        <a href="/hello.html">Hello</a>
+        <a href="/body-only.html">BodyOnly</a>
+        <a href="/blank.html">Blank</a>
+      </div>
+
+      <div>
+        <h2>CSS Lab</h2>
+        <a href="/csslab/hello.html">Hello</a>
+        <a href="/csslab/placeholder.html">placeholderPseudoElement</a>
+        <a href="/csslab/layout.html">Layout</a>
+        <a href="/csslab/layout/flexbox01.html">Flexbox01</a>
+
+        <h3>Theme</h3>
+        <a href="/csslab/theme-root.html">:root-pseudo-class</a>
+        <a href="/csslab/theme.html">Theme switch</a>
+        <a href="/csslab/theme-media.html">System preference theme</a>
+      </div>
+
+      <div>
+        <a href="https://vite.dev/guide/env-and-mode.html">
+          <h2>Vite Envs</h2></a
+        >
+        <ul>
+          <li>import.meta.env.MODE: %import.meta.env.MODE%</li>
+          <li>MODE = %MODE%</li>
+          <li>VITE_TEST_ENV_LOCAL = %VITE_TEST_ENV_LOCAL%</li>
+          <li>TEST_ENV_LOCAL = %TEST_ENV_LOCAL%</li>
+          <li>
+            VITE_TEST_ENV_DEVELOPMENT_LOCAL = %VITE_TEST_ENV_DEVELOPMENT_LOCAL%
+          </li>
+          <li>TEST_ENV_DEVELOPMENT_LOCAL = %TEST_ENV_DEVELOPMENT_LOCAL%</li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="module" src="src/main.ts"></script>
+  </body>
+</html>

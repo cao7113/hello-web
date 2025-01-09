@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwindcss Lab</title>
+  </head>
+
+  <body class="h-screen bg-gray-100">
+    <div class="flex flex-col h-full">
+      <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <h1 class="text-lg font-bold">TwindLab</h1>
+          <ul class="flex space-x-4">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="/pages/index.html" class="hover:underline">Pages index</a></li>
+            <li><a href="/pages/test.html" class="hover:underline">Test</a></li>
+            <li><a href="/pages/daisyui.html" class="hover:underline">Daisyui</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="flex flex-1 overflow-hidden">
+        <aside class="w-64 bg-gray-800 text-white flex-shrink-0 p-4">
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded"
+                >Profile</a
+              >
+            </li>
+          </ul>
+        </aside>
+
+        <main class="flex-1 p-6 bg-white">
+          <h2 class="text-2xl font-bold mb-4">Welcome to MyApp</h2>
+          <p class="text-green-700">
+            This is the main content area. Add your content here.
+          </p>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

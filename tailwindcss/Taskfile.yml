@@ -1,0 +1,17 @@
+# https://taskfile.dev/usage/
+version: "3"
+tasks:
+  default: bun run dev
+  dev: bun run dev
+  build: bun run build
+  pre: |
+    bun run build
+    bun run preview
+
+  ## Setup
+  setup: |
+    bun create vite . --template vanilla-ts
+    bun add -d postcss autoprefixer tailwindcss
+    bun tailwindcss init --postcss --esm --ts
+    
+    bun add -d daisyui

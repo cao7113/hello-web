@@ -1,0 +1,53 @@
+/* 设置整个页面的样式 */
+body {
+  display: flex;
+  justify-content: center; /* 水平方向居中 */
+  align-items: flex-start; /* 垂直方向靠上对齐 */
+  padding-top: 50px; /* 添加顶部内边距，控制离顶部的距离 */
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* 居中容器样式 */
+.center {
+  text-align: center;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+}
+
+/* 文本样式 */
+.center p {
+  font-size: 24px; /* 增加字体大小 */
+  margin: 10px 0;
+}
+
+/* 按钮样式 */
+button {
+  margin-top: 20px;
+  padding: 15px 30px; /* 增加按钮大小 */
+  font-size: 18px; /* 增加按钮文字大小 */
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 信息段落样式 */
+#info {
+  margin-top: 20px; /* 增加段落间距 */
+  font-size: 16px; /* 增加文字大小 */
+  color: #333333; /* 更深的颜色 */
+}

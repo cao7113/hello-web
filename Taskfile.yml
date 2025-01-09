@@ -1,16 +1,12 @@
 # https://taskfile.dev/usage/
 version: "3"
 tasks:
-  # http://localhost:5173
-  run: bun vite
-  build: bun build
-  pre: bun preview
-  # vite serve some/sub/dir
-
-  ## with create-vite templates https://github.com/vitejs/vite/tree/main/packages/create-vite
+  ## Setup projects
+  ## create-vite templates from https://github.com/vitejs/vite/tree/main/packages/create-vite
+  mk-vanilla: bun create vite --template vanilla vanilla
   mk-vanilla-ts: bun create vite --template vanilla-ts vanilla-ts
-  mk-react-ts: bun create vite --template react-ts react-ts
-  mk-vue-ts: bun create vite --template vue-ts vue-ts
 
-  ## Setup
-  # bun add -D vite
+  mk-react-ts: bun create vite --template react-ts react-ts 
+  mk-vue-ts: bun create vite --template vue-ts vue-ts 
+  mk-tailwind: bun create vite --template vanilla-ts tailwind
+  mk-tailwind-react-ts: bun create vite --template vanilla-ts tailwind-react-ts

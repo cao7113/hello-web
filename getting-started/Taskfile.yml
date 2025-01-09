@@ -6,7 +6,8 @@ tasks:
   build: bun run build
   pre: |
     bun run build
-    # preview deponds on build result in dist/ dir
-    bun run preview
-  i: bun install
-  u: bun update
+    bun preview
+
+  ## Setup
+  add-vite: bun add -d vite
+  update: bun update

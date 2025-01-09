@@ -1,8 +1,7 @@
-# Hello Vite
+# Hello Web(3)
 
-- https://vitejs.dev/
-- https://github.com/vitejs/vite
+Playground to web(3) tutorials!
 
-## Getting started
+## Links
 
-https://vitejs.dev/guide/#manual-installation
+- [The Build Tool for the Web](https://vitejs.dev/)

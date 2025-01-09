@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Placeholder & Responsive Images</title>
+    <style>
+      /* 占位符样式 */
+      ::placeholder {
+        color: rgb(127, 208, 144);
+      }
+      ::-webkit-input-placeholder {
+        color: rgb(213, 38, 120);
+      }
+      ::-moz-placeholder {
+        color: gray;
+      }
+      :-ms-input-placeholder {
+        color: gray;
+      }
+
+      /* 响应式背景图片
+         响应式图片的意义：
+         在高分辨率设备上，低分辨率图片可能会显得模糊。
+         使用高分辨率图片可以确保视觉清晰度，但文件大小会更大，因此需要权衡加载性能。 */
+      .image {
+        width: 200px;
+        height: 200px;
+        background-image: url(image@1x.png);
+        background-size: cover;
+      }
+
+      /* 2dppx 表示设备像素比（device pixel ratio，简称 DPR）为 2 或更高。
+         在高分辨率屏幕（如 Retina 显示屏或 2x 像素密度设备）上，加载 image@2x.png 替代低分辨率图片。
+         dppx（device pixels per CSS pixel）：表示每个 CSS 像素的设备像素数，现代浏览器普遍支持。 */
+      @media (min-resolution: 2dppx) {
+        .image {
+          background-image: url(image@2x.png);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 带占位符的输入框 -->
+    <input type="text" placeholder="Enter your text here" />
+
+    <!-- 带背景图片的容器 -->
+    <div class="image"></div>
+  </body>
+</html>

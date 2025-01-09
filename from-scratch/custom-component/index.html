@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:host Pseudo-Class Demo</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">:host Pseudo-Class Demo</h1>
+    <demo-component>
+      <span slot="custom-content">Plain custom content!</span>
+    </demo-component>
+    <demo-component highlighted>
+      <span slot="custom-content">Highlighted custom content!</span>
+    </demo-component>
+    <script type="module" src="./main.ts"></script>
+
+    <style>
+      /* plain DOM, affect all global elements */
+      h1 {
+        color: red;
+      }
+    </style>
+
+    <div id="shadow-host"></div>
+
+    <script>
+      const host = document.querySelector("#shadow-host");
+      const shadowRoot = host.attachShadow({ mode: "open" });
+      shadowRoot.innerHTML = `
+        <style>
+          /* shadow DOM */
+          h1 {
+            color: blue;
+          }
+        </style>
+        <h1>Shadow DOM Heading</h1>
+      `;
+    </script>
+  </body>
+</html>

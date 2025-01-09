@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Switch</title>
+    <style>
+      /* light theme */
+      :root {
+        --bg-color: white;
+        --text-color: black;
+      }
+
+      /* dark theme */
+      [data-theme="dark"] {
+        --bg-color: black;
+        --text-color: white;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: var(--text-color);
+        color: var(--bg-color);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS :root theme switch</h1>
+    <p>Click below button to switch theme</p>
+    <button id="toggle-theme">Switch theme</button>
+
+    <script>
+      // document.body.dataset.theme 是对 <body> 元素的 data-theme 自定义属性的访问。
+      // dataset 是一个对象，允许通过键名访问或修改以 data- 开头的自定义属性值。例如：
+      // <body data-theme="dark"></body>
+      // 对应 dataset.theme 的值为 "dark"。
+      const button = document.getElementById("toggle-theme");
+      button.addEventListener("click", () => {
+        document.body.dataset.theme =
+          document.body.dataset.theme === "dark" ? "" : "dark";
+      });
+    </script>
+  </body>
+</html>

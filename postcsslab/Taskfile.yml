@@ -1,0 +1,24 @@
+# https://taskfile.dev/usage/
+version: "3"
+tasks:
+  default: bun run dev
+  dev: bun run dev
+  build: bun run build
+  pre: |
+    bun run build
+    # preview deponds on build result in dist/ dir
+    bun run preview
+  i: bun install
+  u: bun update
+
+
+  # npm init stylelint
+  csslint: bunx stylelint **/*.css
+  browsers: bunx browserslist
+  prefix-info: bunx autoprefixer --info
+  # npm install postcss postcss-cli autoprefixer
+  # npx postcss *.css --use autoprefixer -d build/
+
+  setup: |
+    bun add -d postcss autoprefixer tailwindcss
+    bun tailwindcss init --esm --ts --postcss --full

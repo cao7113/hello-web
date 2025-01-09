@@ -1,0 +1,21 @@
+# All tools will find target browsers automatically, when you add the following to package.json or in .browserslistrc config
+# https://github.com/browserslist/browserslist
+# playground https://browsersl.ist/
+
+
+
+# Browsers that we support
+> 1% and last 2 versions
+
+# defaults
+# same as
+# > 0.5%, last 2 versions, Firefox ESR, not dead
+
+# defaults and fully supports es6-module
+# maintained node version
+
+# fulllist https://github.com/browserslist/browserslist?tab=readme-ov-file#full-list
+
+## IDE
+# this file same use as .browserslistrc but better syntax support in VSCode Extension
+# https://marketplace.visualstudio.com/items?itemName=webben.browserslist

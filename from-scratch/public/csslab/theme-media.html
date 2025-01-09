@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adapt system theme</title>
+    <style>
+      /* ligth theme */
+      :root {
+        --bg-color: white;
+        --text-color: black;
+      }
+
+      /* detect system theme setting */
+      @media (prefers-color-scheme: dark) {
+        /* dark theme */
+        :root {
+          --bg-color: black;
+          --text-color: white;
+        }
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS :root + Media query</h1>
+    <p>Auto adapted system preference.</p>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+.demo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(to right, #4caf50, #81c784);
+  border-radius: 8px;
+  user-select: none; /* autoprefixer 将为旧版浏览器添加前缀 */
+  transition: transform 0.3s ease; /* autoprefixer 将为 transition 添加前缀 */
+}
+
+.demo-box:hover {
+  transform: scale(1.1);
+}
