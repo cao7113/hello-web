@@ -3,7 +3,7 @@ class DemoComponent extends HTMLElement {
     // 在构造函数中，必须先调用 super() 才能使用 this。
     super();
 
-    const shadow = this.attachShadow({ mode: 'open' });
+    const shadow = this.attachShadow({ mode: "open" });
     shadow.innerHTML = `
       <style>
         /* Styles for the host element */
@@ -45,13 +45,11 @@ class DemoComponent extends HTMLElement {
       </div>
     `;
 
-
-    this.shadowRoot.querySelector('div').addEventListener('click', () => {
-      console.log('Component clicked!');
+    this.shadowRoot!.querySelector("div")!.addEventListener("click", () => {
+      console.log("Component clicked!");
     });
   }
 }
 
 // Define the custom element
-customElements.define('demo-component', DemoComponent);
-
+customElements.define("demo-component", DemoComponent);

@@ -14,4 +14,5 @@ tasks:
     bun add -d postcss autoprefixer tailwindcss
     bun tailwindcss init --postcss --esm --ts
     
+    # bun add -D daisyui@latest
     bun add -d daisyui

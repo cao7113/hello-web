@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.test-only {
-  @apply bg-green-200;
+/* custom rules  */
+.test {
+  @apply bg-red-200;
 }
+
+/* daisyui todo */

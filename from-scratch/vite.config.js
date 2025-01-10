@@ -12,9 +12,14 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "about.html"),
-        subDemo: resolve(__dirname, "sub-demo/index.html"),
-        customComponent: resolve(__dirname, "custom-component/index.html"),
+        // make sure output to final dist/ after build
+        about: resolve(__dirname, "/pages/about.html"),
+        demo: resolve(__dirname, "/pages/demo/index.html"),
+        tsGreeter: resolve(__dirname, "/pages/ts-greeter/greeter.html"),
+        customComponent: resolve(
+          __dirname,
+          "/pages/custom-component/index.html"
+        ),
       },
     },
   },
