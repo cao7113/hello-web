@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout with Tailwind CSS and DaisyUI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* 局部优化样式 */
+      .custom-navbar {
+        background-color: #1e293b; /* 深蓝背景 */
+        color: white; /* 白色文字 */
+      }
+      .custom-footer {
+        background-color: #0f172a; /* 深蓝背景 */
+        color: #94a3b8; /* 灰白文字 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen">
+      <!-- Navbar -->
+      <nav class="custom-navbar p-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <a href="#" class="btn btn-ghost text-xl">Brand</a>
+          <a href="#" class="btn btn-ghost">Home</a>
+          <a href="#" class="btn btn-ghost">About</a>
+          <a href="#" class="btn btn-ghost">Contact</a>
+        </div>
+        <button class="btn btn-primary">Sign In</button>
+      </nav>
+
+      <!-- Breadcrumbs -->
+      <div class="bg-base-200 p-4">
+        <div class="text-sm breadcrumbs">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li class="text-gray-500">Current Page</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-1">
+        <!-- Sidebar Menu -->
+        <aside class="bg-base-300 w-64 p-4 space-y-4">
+          <ul class="menu menu-vertical bg-base-300">
+            <li class="menu-title"><span>Main Menu</span></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li class="menu-title"><span>Other</span></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+          <h1 class="text-2xl font-bold mb-4">Page Title</h1>
+          <p class="mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+          </p>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="card bg-primary text-primary-content p-4">
+              <h2 class="card-title">Card 1</h2>
+              <p>Some content for card 1</p>
+            </div>
+            <div class="card bg-secondary text-secondary-content p-4">
+              <h2 class="card-title">Card 2</h2>
+              <p>Some content for card 2</p>
+            </div>
+            <div class="card bg-accent text-accent-content p-4">
+              <h2 class="card-title">Card 3</h2>
+              <p>Some content for card 3</p>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <!-- Footer -->
+      <footer class="custom-footer p-4 text-center">
+        <p>© 2025 Your Company. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>

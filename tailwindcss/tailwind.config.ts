@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss";
-import daisyui from "daisyui"
+import daisyui from "daisyui";
 
 export default {
-  content: ["./index.html", "./pages/**/*.html", "./daisyui/**/*.html", "./src/**/*.{js,ts}"],
+  content: ["./index.html", "./pages/**/*.html", "./src/**/*.{js,ts}"],
   theme: {
     extend: {
       colors: {
@@ -13,7 +13,5 @@ export default {
       },
     },
   },
-  plugins: [
-    daisyui,
-  ],
+  plugins: [daisyui],
 } satisfies Config;
